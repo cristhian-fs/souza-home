@@ -19,6 +19,13 @@
   pointer-events: all;
 }
 
+.navOptionsDesktop {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(78, 78, 78, 0.35);
+  background: rgba(0, 0, 0, 0.2);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -150,6 +157,12 @@ body {
   padding-right: 24px;
   padding-bottom: 48px;
 }
+@media (min-width: 768px) {
+  .mainCaseThumb {
+    padding-left: 56px;
+    padding-bottom: 56px;
+  }
+}
 .mainCaseThumb .motionInsiderOverlay {
   width: 100%;
   height: 100%;
@@ -158,9 +171,19 @@ body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .mainCaseThumb .motionInsiderOverlay {
+    background: none;
+  }
+}
 
 .mainCaseSpecs {
   border-top: 1px solid rgba(243, 243, 242, 0.25);
+}
+@media (min-width: 768px) {
+  .mainCaseSpecs {
+    width: 50%;
+  }
 }
 
 .motionInsider {
@@ -173,21 +196,52 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .heroImg {
+    width: auto;
+    height: auto;
+    -o-object-fit: none;
+       object-fit: none;
+    right: -56px;
+    top: -10%;
+  }
 }
 .motionInsider .redVector {
   position: absolute;
   top: 50%;
   left: -10%;
   z-index: 3;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .redVector {
+    top: 60%;
+    left: 50%;
+  }
 }
 .motionInsider .lineMotion {
   position: absolute;
   top: 80%;
   left: -20%;
   z-index: 3;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .lineMotion {
+    left: 0;
+    top: 92%;
+  }
 }
 .motionInsider .overlayLogo {
   width: 60px;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .overlayLogo {
+    width: auto;
+  }
 }
 .motionInsider .backTextSmallLogo {
   position: absolute;
@@ -195,7 +249,15 @@ body {
   opacity: 0.03;
   top: 70%;
   left: 50%;
+  pointer-events: none;
   transform: translate(-50%, 0) scale(0.8);
+}
+@media (min-width: 768px) {
+  .motionInsider .backTextSmallLogo {
+    top: 67%;
+    left: 35%;
+    transform: translate(-50%, 0) scale(1);
+  }
 }
 .motionInsider .backSmallLogo {
   position: absolute;
@@ -203,13 +265,52 @@ body {
   opacity: 0.28;
   top: 0%;
   left: 75%;
+  pointer-events: none;
   transform: translate(-50%, 0) scale(0.8);
+}
+@media (min-width: 768px) {
+  .motionInsider .backSmallLogo {
+    left: 30%;
+    top: -15%;
+  }
+}
+.motionInsider .backSmallLogo2 {
+  display: none;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .backSmallLogo2 {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 13%;
+  }
 }
 .motionInsider .elipseOverlay {
   position: absolute;
   top: 50%;
   left: 80%;
   z-index: 3;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .elipseOverlay {
+    top: 60%;
+    left: 90%;
+  }
+}
+.motionInsider .overlayCruzEsq {
+  display: none;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .motionInsider .overlayCruzEsq {
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 70%;
+  }
 }
 
 .swiper {
@@ -224,7 +325,6 @@ body {
   display: flex !important;
   gap: 16px !important;
 }
-
 .swiper-pagination-bullet {
   height: auto !important;
 }
@@ -243,11 +343,26 @@ body {
   right: 24px;
   width: 40%;
 }
+@media (min-width: 768px) {
+  .imagemBio {
+    right: 0;
+    width: 464px;
+    top: 30%;
+  }
+}
 
 .letsTalkOverlay {
   position: absolute;
-  top: 40%;
+  top: 60%;
   right: 24px;
+  width: 80px;
+}
+@media (min-width: 768px) {
+  .letsTalkOverlay {
+    width: auto;
+    top: 60%;
+    right: 0;
+  }
 }
 
 input {

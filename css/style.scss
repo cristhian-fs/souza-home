@@ -141,6 +141,11 @@ body{
   padding-right: 24px;
   padding-bottom: 48px;
 
+  @media (min-width: 768px){
+    padding-left: 56px;
+    padding-bottom: 56px;
+  }
+
   .motionInsiderOverlay{
     width: 100%;
     height: 100%;
@@ -148,12 +153,19 @@ body{
     inset: 0px;
     background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
     z-index: 2;
+    @media (min-width: 768px){
+      background: none;
+    }
+    
   }
   
   
 }
 .mainCaseSpecs{
   border-top: 1px solid rgba(243,243,242,0.25);
+  @media (min-width: 768px){
+    width: 50%;
+  }
 }
 
 
@@ -166,6 +178,14 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
+    pointer-events: none;
+    @media (min-width: 768px) {
+      width: auto;
+      height: auto;
+      object-fit: none;
+      right: -56px;
+      top: -10%;
+    }
   }
 
   .redVector{
@@ -173,6 +193,11 @@ body{
     top: 50%;
     left: -10%;
     z-index: 3;
+    pointer-events: none;
+    @media (min-width: 768px){
+      top: 60%;
+      left: 50%;
+    }
   }
 
   .lineMotion{
@@ -180,9 +205,19 @@ body{
     top: 80%;
     left: -20%;
     z-index: 3;
+    pointer-events: none;
+    @media (min-width: 768px){
+      left: 0;
+      top: 92%;
+    }
   }
   .overlayLogo{
     width: 60px;
+    pointer-events: none;
+    @media (min-width: 768px) {
+      width: auto;
+      
+    }
   }
   .backTextSmallLogo{
     position: absolute;
@@ -190,7 +225,13 @@ body{
     opacity: 0.03;
     top: 70%;
     left: 50%;
+    pointer-events: none;
     transform: translate(-50%,0) scale(0.8);
+    @media (min-width: 768px){
+      top: 67%;
+      left: 35%;
+      transform: translate(-50%,0) scale(1);
+    }
   }
   .backSmallLogo{
     position: absolute;
@@ -198,13 +239,44 @@ body{
     opacity: 0.28;
     top: 00%;
     left: 75%;
+    pointer-events: none;
     transform: translate(-50%,0) scale(0.8);
+    @media (min-width: 768px) {
+      left: 30%;
+      top: -15%;
+    }
+  }
+  .backSmallLogo2{
+    display: none;
+    pointer-events: none;
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 25%;
+      left: 13%;
+    }
   }
   .elipseOverlay{
     position: absolute;
     top: 50%;
     left: 80%;
     z-index: 3;
+    pointer-events: none;
+    @media (min-width: 768px){
+      top: 60%;
+      left: 90%;
+    }
+  }
+  .overlayCruzEsq{
+    display: none;
+    pointer-events: none;
+    @media (min-width: 768px){
+      display:block;
+      position: absolute;
+      left: 0%;
+      top: 70%;
+    }
   }
 }
 
@@ -220,6 +292,10 @@ body{
   height: auto !important;
   display: flex !important;
   gap: 16px !important;
+
+  @media (min-width: 768px){
+
+  }
 }
 
 .swiper-pagination-bullet{
@@ -239,12 +315,24 @@ body{
   top: 25%;
   right: 24px;
   width: 40%;
+
+  @media (min-width: 768px){
+    right: 0;
+    width: 464px;
+    top: 30%;
+  }
 }
 
 .letsTalkOverlay{
   position: absolute;
-  top: 40%;
+  top: 60%;
   right: 24px;
+  width: 80px;
+  @media (min-width: 768px) {
+    width: auto;
+    top: 60%;
+    right: 0;
+  }
 }
 
 // FORMS SETTINGS
