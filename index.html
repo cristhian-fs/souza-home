@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="./_sass/hamburgers/hamburgers.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- SCRIPTS -->
+  <script src="js/svg-inject.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- HEADER MOBILE -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#040305] to-[#04030500]">
+    <div class="flex items-center justify-between px-6 py-8 w-full">
+      <img src="/svg/logoHero.svg" alt="" onload="SVGInject(this)">
+      <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+  <div class="headerOptions rounded-2xl">
+    <div class="w-full flex items-center justify-end p-8">
+      <button class="closeMenuMobile flex items-center gap-2">
+        <img src="/svg/closeMenuIcon.svg" alt="" onload="SVGInject(this)">
+        <p class="text-base text-black">Fechar menu</p>
+      </button>
+    </div>
+    <div class="mt-4">
+      <a href="">
+        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
+          <p class="text-base text-black">Home</p>
+          <img src="/svg/arrow-bottom-right.svg" alt="">
+        </button>
+      </a>
+      <a href="">
+        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
+          <p class="text-base text-black">Serviços</p>
+          <img src="/svg/arrow-bottom-right.svg" alt="">
+        </button>
+      </a>
+      <a href="">
+        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
+          <p class="text-base text-black">Cases</p>
+          <img src="/svg/arrow-bottom-right.svg" alt="">
+        </button>
+      </a>
+      <a href="">
+        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
+          <p class="text-base text-black">Sobre</p>
+          <img src="/svg/arrow-bottom-right.svg" alt="">
+        </button>
+      </a>
+      <a href="">
+        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
+          <p class="text-base text-black">Solicitar contato</p>
+          <img src="/svg/arrow-bottom-right.svg" alt="">
+        </button>
+      </a>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main class="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative">
+    <div class="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
+      <video class="w-full h-full object-cover" autoplay muted loop>
+        <source src="/img/3D_ASSET_PAGE_01.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+    <div class="relative z-10">
+      <h1 class="text-5xl">USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS</h1>
+      <a href="">
+        <button class="w-full px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10">
+          <p class="text-[#08060C]">See project</p>
+          <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+        </button>
+      </a>
+      <div class="flex items-center justify-center gap-2 mt-12">
+        <p class="">Scroll</p>
+        <img src="/svg/down-arrow.svg" alt="">
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SECTION 02 -->
+  <section class="px-6 py-14 relative">
+    <video class="" width="146" autoplay muted loop>
+      <source src="/img/3D_ASSET_PAGE_01.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <h2 class="text-3xl uppercase first-line:block first-line:text-right">
+      <div class="text-right">
+        “MELHORE SUA
+      </div> VISIBILIDADE E PRESENÇA DIGITAL ATRÁVES DO NOSSO DESIGN. <span class="text-[rgba(148,148,148,0.5)]">CUIDAMOS DOS SEUS CRIATIVOS, KEY VISUAL, IDENTIDADE VISUAL E SITE DO SEU Negócio
+        e/ou LANCAMENTO”<span>
+    </h2>
+  </section>
+
+  <!-- SECTION 03 -->
+  <section class="px-6 py-14">
+    <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">02 / </span>Nossos serviços</h5>
+    <div class="toggleContent pt-6 pb-8">
+      <div class="toggleButton flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <img src="/svg/sitesIcon.svg" class="h-6 w-6 gradientToggleIcon sitesELp" alt="" onload="SVGInject(this)">
+          <p class="text-xl toggleServiceName">Sites e Landing Pages</p>
+        </div>
+        <img src="/svg/arrow-bottom-right.svg" class="arrowToggle" alt="" onload="SVGInject(this)">
+      </div>
+      <p class="text-base extraContent">Nossos Sites e Landing Pages são criados e desenvolvidos
+        de forma criativa, exclusiva e direcionada ao seu negócio.
+        O Visual vende, mas somos também especialistas em entregar
+        páginas rápidas, adaptadas e responsivas para a melhor
+        experiencia do seu lead e venda do seu infoproduto e serviço
+        no digital.</p>
+    </div>
+    <div class="toggleContent pt-6 pb-8">
+      <div class="toggleButton flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <img src="/svg/keyVisual.svg" class="h-6 w-6 gradientToggleIcon keyVisual" alt="" onload="SVGInject(this)">
+          <p class="text-xl toggleServiceName">Key visual</p>
+        </div>
+        <img src="/svg/arrow-bottom-right.svg" class="arrowToggle" alt="" onload="SVGInject(this)">
+      </div>
+      <p class="text-base extraContent">Desenvolvemos Kv`s conceituais e alinhadas a sua estratégia.
+        Já trabalhamos e criamos peças responsáveis por gerar
+        faturamentos acima de 6 dígitos aos nossos clientes.</p>
+    </div>
+    <div class="toggleContent pt-6 pb-8">
+      <div class="toggleButton flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <img src="/svg/idVisual.svg" class="h-6 w-6 gradientToggleIcon idVisual" alt="" onload="SVGInject(this)">
+          <p class="text-xl toggleServiceName">Identidade visual</p>
+        </div>
+        <img src="/svg/arrow-bottom-right.svg" class="arrowToggle" alt="" onload="SVGInject(this)">
+      </div>
+      <p class="text-base extraContent">Sua mensagem precisa ser transmitida e dar voz aos seus
+        valores e a personalidade do seu produto e/ou negócio.
+        Criamos marcas, elementos gráficos, cores, formatos, tipografias
+        que posicionam, diferenciam e potencializam a voz do seu
+        negócio.</p>
+    </div>
+    <div class="toggleContent pt-6 pb-8">
+      <div class="toggleButton flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <img src="/svg/designPInfo.svg" class="h-6 w-6 gradientToggleIcon designerP" alt="" onload="SVGInject(this)">
+          <p class="text-xl toggleServiceName">Design para Lançamentos</p>
+        </div>
+        <img src="/svg/arrow-bottom-right.svg" class="arrowToggle" alt="" onload="SVGInject(this)">
+      </div>
+      <p class="text-base extraContent">Pensamos e criamos nosso design de acordo com a estratégia
+        do seu lançamento. O Design não basta ser bonito, ele precisa
+        ser funcional. Gere percepção de valor ao seu produto ou
+        serviço, comunique de forma assertiva.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 04 -->
+  <section class="px-6 py-14">
+    <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">03 / </span>cases</h5>
+    <div class="mainCase mt-8">
+      <div class="mainCaseThumb flex flex-col justify-end align-center">
+        <div class="motionInsider absolute inset-0">
+          <span class="motionInsiderOverlay"></span>
+          <img src="/img/motionInsiderAssets/HERO.webp" class="heroImg" alt="">
+          <img src="/img/motionInsiderAssets/RedVector.svg" class="redVector" alt="">
+          <img src="/img/motionInsiderAssets/linha2.svg" class="lineMotion" alt="">
+          <img src="/img/motionInsiderAssets/overlayLogoReduzida.png" class="overlayLogo" alt="">
+          <img src="/img/motionInsiderAssets/logoReduzida.png" class="backTextSmallLogo" alt="">
+          <img src="/img/motionInsiderAssets/logoReduzida.png" class="backSmallLogo" alt="">
+          <img src="/img/motionInsiderAssets/ELIPSE.svg" class="elipseOverlay" alt="">
+        </div>
+        <div class="mainCaseSpecs pt-8 relative z-10">
+          <img src="/img/motionInsiderAssets/logoMotionInsider.svg" alt="" onload="SVGInject(this)">
+          <p class="text-base text-[#F3F3F2] mt-4">Landing Page Lançamento</p>
+        </div>
+      </div>
+      <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+        <div>
+          <p class="text-base font-semibold">Motion Insider | Levy Motion</p>
+          <p class="text-base opacity-80">Lançamentos</p>
+        </div>
+        <a href="">
+          <button class="flex items-center gap-2">
+            <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+            <p class="text-base opacity-80">Veja completo</p>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="mainCase mt-9">
+      <div class="mainCaseThumb flex flex-col justify-end align-center">
+        <div class="absolute inset-0">
+
+          <img src="img/BPO Class Thumb.webp" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="mainCaseSpecs pt-4 relative z-10">
+
+          <p class="text-base font-semibold">BPO CLASS SUMMIT</p>
+          <p class="text-base opacity-80">Website design</p>
+        </div>
+      </div>
+      <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+        <div>
+
+          <p class="text-2xl font-medium text-[#F3F3F2]">BPO Class Submit</p>
+          <p class="text-base text-[#F3F3F2] mt-2">Evento presencial de BPO Financeiro</p>
+        </div>
+        <a href="">
+          <button class="flex items-center gap-2">
+            <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+            <p class="text-base text-nowrap opacity-80">Veja completo</p>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="mainCase mt-9">
+      <div class="mainCaseThumb flex flex-col justify-end align-center">
+        <div class="absolute inset-0">
+          <span class="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent"></span>
+          <img src="img/AOrdemThumb.webp" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="mainCaseSpecs pt-4 relative z-10">
+          <p class="text-2xl font-medium text-[#F3F3F2]">A Ordem</p>
+          <p class="text-xs text-[#F3F3F2] mt-2">Mentoria / ID Visual</p>
+        </div>
+      </div>
+      <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+        <div>
+          <p class="text-base font-semibold">BPO CLASS SUMMIT</p>
+          <p class="text-base opacity-80">KV e Logo para Mentoria</p>
+        </div>
+        <a href="">
+          <button class="flex items-center gap-2">
+            <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+            <p class="text-base opacity-80">Veja completo</p>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="mt-12">
+      <p class="text-xl w-3/4">“66% dos cliques são norteados pelo design</p>
+      <div class="flex items-center justify-between mt-8">
+        <a href="">
+          <button class="w-full px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full">
+            <p class="text-[#08060C] text-sm">Ver todos os projetos</p>
+            <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+        <div class="border-solid border border-[#8E8E8E] h-9 w-9 rounded-full flex items-center justify-center">
+          <img src="/svg/arrow-down-full-projects.svg" alt="" onload="SVGInject(this)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION TESTIMONIAL -->
+  <section class="px-6 py-14">
+    <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">04 / </span>DEPOIMENTOS</h5>
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div>
+            <div class="flex flex-col">
+              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Nome do cliente</p>
+                <p class="text-sm opacity-80">Key Visual</p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <div class="flex flex-col">
+              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Nome do cliente</p>
+                <p class="text-sm opacity-80">Key Visual</p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <div class="flex flex-col">
+              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Nome do cliente</p>
+                <p class="text-sm opacity-80">Key Visual</p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <div class="flex flex-col">
+              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Nome do cliente</p>
+                <p class="text-sm opacity-80">Key Visual</p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+  </section>
+
+  <!-- SECTION ABOUT -->
+  <section class="px-6 py-14 relative">
+    <p class="text-7xl uppercase">Davidson Souza</p>
+    <p class="text-sm text-[#5F5F5F] mt-4 w-1/2">
+      Escrevi e transformei diversas histórias através do meu trabalho.
+      <br><br>
+      Já trabalhei com diversas agências no mercado de infoproduto, mais de 30 projetos que geraram resultados de excelência. Meu objetivo é construir parcerias e potencializar os resultados do seu negócio,
+      <br><br>
+      Seja diferente, pontencialize sua voz e gere resultados!
+    </p>
+    <div class="flex items-center mt-10 gap-11">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded "><img src="/svg/projects-delivery-icon.svg" class="w-5 h-5" alt="" onload="SVGInject(this)"></div>
+        <div class="">
+          <p class="text-base font-bold">+30</p>
+          <p class="text-xs">Projetos entregues</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded"><img src="/svg/experience-years.svg" class="w-5 h-5" alt="" onload="SVGInject(this)"></div>
+        <div class="">
+          <p class="text-base font-bold">4 anos</p>
+          <p class="text-xs">de experiência</p>
+        </div>
+      </div>
+    </div>
+    <img src="/img/imagemSouza.jpg" class="imagemBio" alt="">
+    <img src="/svg/letsTalk.svg" class="letsTalkOverlay" alt="">
+  </section>
+
+  <!-- SECTION CTA -->
+  <section class="px-6 py-14">
+    <div>
+      <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">04 / </span>CONTATO</h5>
+      <p class="text-5xl uppercase mt-6">Vamos conversar?</p>
+      <p class="text-sm text-[#5F5F5F] mt-4">
+        Nós mande uma mensagem, estou pronto para te atender e trazer uma solução adequada ao seu negócio! Preencha o formulário que em breve retornaremos seu contato.
+      </p>
+    </div>
+    <div>
+      <form action="" method="post" class="flex flex-col gap-6 mt-9">
+        <input type="text" placeholder="Nome completo" aria-placeholder="Nome completo" id="name">
+        <input type="email" placeholder="Email" aria-placeholder="Email" id="email">
+        <input type="tel" placeholder="Whatsapp" aria-placeholder="Whatsapp" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+        <fieldset>
+          <legend class="text-base text-[#A2A2A2]">Preciso de ajuda com</legend>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <input type="radio" id="opcao1" name="helpWith" value="opcao1">
+            <label for="opcao1" class="button">Identidade visual</label>
+
+            <input type="radio" id="opcao2" name="helpWith" value="opcao2">
+            <label for="opcao2" class="button">Websites & Landing Pages</label>
+
+            <input type="radio" id="opcao3" name="helpWith" value="opcao3">
+            <label for="opcao3" class="button">Aplicativos</label>
+
+            <input type="radio" id="opcao4" name="helpWith" value="opcao4">
+            <label for="opcao4" class="button">SaaS</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-base text-[#A2A2A2]">Meus faturamento atual é</legend>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <input type="radio" id="billingOption01" name="billing" value="opcao1">
+            <label for="billingOption01" class="button">Menor que 15 mil</label>
+
+            <input type="radio" id="billingOption02" name="billing" value="opcao2">
+            <label for="billingOption02" class="button">15-20mil</label>
+
+            <input type="radio" id="billingOption03" name="billing" value="opcao3">
+            <label for="billingOption03" class="button">20-30mil</label>
+
+            <input type="radio" id="billingOption04" name="billing" value="opcao4">
+            <label for="billingOption04" class="button">Acima de x mil</label>
+          </div>
+        </fieldset>
+        <button type="submit" class="w-full px-6 py-2 gradient-button flex items-center justify-center rounded-full">
+          <p class="text-[#08060C]">Solicitar contato</p>
+        </button>
+
+
+      </form>
+    </div>
+
+  </section>
+
+  <footer class="px-6 py-14 bg-[#08060C]">
+    <div class="flex items center gap-4">
+      <img src="/img/lastCtaPic.png" class="rounded-lg h-32" alt="">
+      <div>
+        <h4 class="text-4xl uppercase">Vamos conversar?</h4>
+        <a href="">
+          <button class="px-4 py-2 gradient-button flex items-center justify-center gap-3 rounded-full mt-3">
+            <p class="text-[#08060C]">Entrar em contato</p>
+            <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between items-center gap-4 mt-20">
+      <div class="order-2">
+        <p class="text-sm">Email</p>
+        <p class="text-sm mt-2 text-[#828282]">Hello@davidsonsouza.com</p>
+      </div>
+      <div class="order-2">
+        <p class="text-sm">Telefone:</p>
+        <p class="text-sm mt-2 text-[#828282]">(31) 97505-3019</p>
+      </div>
+      <div class="w-full flex justify-center items-center order-1">
+        <button class="flex items-center gap-2 pb-1 border-solid border-b border-b-[#0E0D1A]">
+          <p class="text-lg">Voltar ao topo</p>
+          <img src="/svg/backToTop.svg" alt="" onload="SVGInject(this)">
+        </button>
+      </div>
+    </div>
+    <div class="flex items-center justify-between mt-7 pt-7 border-t border-t-white">
+      <p class="text-sm text-[#828282]">Solucoes</p>
+      <p class="text-sm text-[#828282]">Solucoes</p>
+      <p class="text-sm text-[#828282]">Solucoes</p>
+      <p class="text-sm text-[#828282]">Solucoes</p>
+    </div>
+
+  </footer>
+
+  <script src="/js/app.js"></script>
+
+  <!-- SLIDER SCRIPT INITIALIZATION -->
+  <script>
+    let swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

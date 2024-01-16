@@ -1,0 +1,16 @@
+.headerOptions{
+  background: #fff;
+  width: 70%;
+  position: fixed;
+  top: 96px;
+  right: 24px;
+  transition: 700ms all ease;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.headerOptions.is-active{
+  opacity: 1;
+  pointer-events: all;
+}
