@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () =>{
   const headerOptions = document.querySelector('.headerOptions')
   const closeMenuMobile = document.querySelector('.closeMenuMobile')
 
+  if(headerOptions){
+    const mobileLinks = headerOptions.querySelectorAll('a')
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        if(headerOptions.classList.contains('is-active')){
+          hamburgerButton.classList.remove('is-active')
+          headerOptions.classList.remove('is-active')
+        }
+      })
+    })
+  }
+
   hamburgerButton.addEventListener('click', (e) =>{
     e.preventDefault()
     hamburgerButton.classList.toggle('is-active')
