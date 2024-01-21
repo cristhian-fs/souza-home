@@ -26,6 +26,200 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040305;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms all ease;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#loader.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bars {
+  width: 80%;
+}
+.bars .grayBar {
+  width: 100%;
+  height: 2px;
+  background: #5F5F5F;
+  display: block;
+  position: relative;
+}
+.bars .loadingBar {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(99deg, #0A0816 -13.17%, #DEDCFF 35.6%, #333357 118.71%);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0% 0%;
+}
+
+.topBarCase1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 11;
+  animation: case01 6s infinite linear;
+}
+
+@keyframes case01 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.palmBeachCase {
+  animation: case01Palm 12s infinite linear;
+}
+
+@keyframes case01Motion {
+  0%, 45%, 100% {
+    opacity: 1;
+  }
+  50%, 95% {
+    opacity: 0;
+  }
+}
+.motionInsiderCase {
+  animation: case01Motion 12s infinite linear;
+}
+
+@keyframes case01Palm {
+  0%, 45%, 100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  50%, 95% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.topBarCase2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 11;
+  animation: case01 6s infinite 2s linear;
+}
+
+.bpoClassCase {
+  animation: case01Motion 12s infinite 2s linear;
+}
+
+.candyLipsCase {
+  animation: case01Palm 12s infinite 2s linear;
+}
+
+.topBarCase3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 11;
+  animation: case01 6s infinite 4s linear;
+}
+
+.ordemCase {
+  animation: case01Motion 12s infinite 4s linear;
+}
+
+.bernardoCase {
+  animation: case01Palm 12s infinite 4s linear;
+}
+
+@media (min-width: 768px) {
+  .heroButton {
+    position: absolute;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    z-index: 25;
+    transform-origin: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .section06:hover {
+    cursor: none;
+  }
+}
+.letsTalkOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  transform: translate(0%, 0%);
+}
+@media (min-width: 768px) {
+  .letsTalkOverlay {
+    width: auto;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transition: 0.5s scale ease;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mask-button-text {
+  overflow: hidden;
+  position: relative;
+}
+.mask-button-text p {
+  transition: 500ms all ease;
+}
+.mask-button-text .second-text {
+  position: absolute;
+  top: 110%;
+  left: 0;
+}
+
+.maskButtonAnim:hover .first-text {
+  transform: translateY(-100%);
+}
+.maskButtonAnim:hover .second-text {
+  top: 0;
+}
+
+.caseThumb {
+  transition: 500ms all ease;
+  filter: saturate(0.1) brightness(0.2);
+}
+@media (max-width: 767px) {
+  .caseThumb {
+    filter: saturate(1) brightness(1);
+  }
+}
+
+.mainCase:hover .caseThumb {
+  filter: saturate(1) brightness(1);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -34,6 +228,28 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  padding-right: 4px;
+  width: 5px;
+  background: transparent;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #040305; /* color of the tracking area */
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #505050;
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #5200FF;
 }
 
 @font-face {
@@ -76,6 +292,26 @@ body {
   color: #FFFFFF;
 }
 
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .almaraiFont {
   font-family: "Almarai";
 }
@@ -107,9 +343,19 @@ body {
 }
 
 .toggleContent {
-  border-bottom: 1px solid #505050;
   transition: 500ms all ease;
   overflow: hidden;
+  position: relative;
+}
+.toggleContent .contentAsideBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transition: 500ms all ease;
+  background-color: #505050;
+  transform-origin: 0% 0%;
 }
 .toggleContent .toggleServiceName {
   color: #505050;
@@ -126,7 +372,13 @@ body {
 }
 
 .toggleContent.active {
-  border-bottom: 1px solid #E1E1E1;
+  position: relative;
+}
+.toggleContent.active::after {
+  background-color: #E1E1E1;
+}
+.toggleContent.active .contentAsideBar {
+  background-color: #E1E1E1;
 }
 .toggleContent.active .toggleServiceName {
   background: var(--Souza-Gradiente, linear-gradient(99deg, #0A0816 -13.17%, #DEDCFF 35.6%, #DEDCFF 35.6%, #333357 118.71%));
@@ -175,6 +427,22 @@ body {
   .mainCaseThumb .motionInsiderOverlay {
     background: none;
   }
+}
+.mainCaseThumb .candyLipsOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 47.38%, #15000D 100%);
+  z-index: 2;
+}
+.mainCaseThumb .mviOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(180deg, rgba(122, 48, 96, 0) 47.38%, #000000 100%);
+  z-index: 2;
 }
 
 .mainCaseSpecs {
@@ -313,6 +581,52 @@ body {
   }
 }
 
+.palmBeach {
+  background-color: #9AA697;
+}
+.palmBeach .palmBeachFoto {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 70% 0%;
+     object-position: 70% 0%;
+}
+@media (min-width: 768px) {
+  .palmBeach .palmBeachFoto {
+    -o-object-position: 0% 50%;
+       object-position: 0% 50%;
+  }
+}
+.palmBeach .palmBeachSquare {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #9AA697;
+}
+@media (min-width: 768px) {
+  .palmBeach .palmBeachSquare {
+    width: 35%;
+    height: 100%;
+  }
+}
+.palmBeach .palmBeachArrows {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: soft-light;
+}
+@media (min-width: 768px) {
+  .palmBeach .palmBeachArrows {
+    top: 50%;
+    left: 75%;
+  }
+}
+
 .swiper {
   padding-bottom: 56px !important;
 }
@@ -351,20 +665,6 @@ body {
   }
 }
 
-.letsTalkOverlay {
-  position: absolute;
-  top: 60%;
-  right: 24px;
-  width: 80px;
-}
-@media (min-width: 768px) {
-  .letsTalkOverlay {
-    width: auto;
-    top: 60%;
-    right: 0;
-  }
-}
-
 input {
   border: none;
   background: transparent;
@@ -374,14 +674,17 @@ input {
 }
 input:focus {
   border: none;
+  border-bottom: 1px solid #A2A2A2;
   outline: none;
 }
 input:active {
   border: none;
+  border-bottom: 1px solid #A2A2A2;
   outline: none;
 }
 input:focus-visible {
   border: none;
+  border-bottom: 1px solid #A2A2A2;
   outline: none;
 }
 
@@ -405,4 +708,66 @@ input[type=radio]:checked + label.button {
   background: linear-gradient(99deg, #0A0816 -13.17%, #DEDCFF 35.6%, #DEDCFF 35.6%, #333357 118.71%);
   border-color: transparent;
   color: #08060C;
+}
+
+.secondVideo {
+  position: absolute;
+  top: 10%;
+  left: 24px;
+  z-index: 0;
+}
+
+.blurred-img img {
+  opacity: 0;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.blurred-img {
+  filter: blur(10px);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blurred-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: white;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.blurred-img.loaded::before {
+  animation: none;
+  content: none;
+}
+
+.blurred-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.blurred-img.loaded {
+  background-image: none !important;
+  filter: blur(0px);
+}
+
+.blurred-img.loaded img {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

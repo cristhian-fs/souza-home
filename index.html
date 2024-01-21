@@ -18,6 +18,22 @@
 </head>
 
 <body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader" class="">
+    <div class="bars">
+      <div class="relative">
+        <div class="grayBar"></div>
+        <div class="loadingBar"></div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8">
+        <img src="/svg/logoHero.svg" onload="SVGInject(this)" alt="">
+        <p id="numberLoading" class="text-xl"></p>
+      </div>
+    </div>
+  </div>
+
   <!-- HEADER MOBILE -->
   <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#040305] to-[#04030500] md:hidden">
     <div class="flex items-center justify-between px-6 py-8 w-full">
@@ -37,36 +53,46 @@
       </button>
     </div>
     <div class="mt-4">
-      <a href="">
-        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
-          <p class="text-base text-black">Home</p>
-          <img src="/svg/arrow-bottom-right.svg" alt="">
-        </button>
-      </a>
-      <a href="">
-        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
-          <p class="text-base text-black">Serviços</p>
-          <img src="/svg/arrow-bottom-right.svg" alt="">
-        </button>
-      </a>
-      <a href="">
-        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
-          <p class="text-base text-black">Cases</p>
-          <img src="/svg/arrow-bottom-right.svg" alt="">
-        </button>
-      </a>
-      <a href="">
-        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
-          <p class="text-base text-black">Sobre</p>
-          <img src="/svg/arrow-bottom-right.svg" alt="">
-        </button>
-      </a>
-      <a href="">
-        <button class="w-full flex items-center justify-between px-8 py-4 border-b border-b-black">
-          <p class="text-base text-black">Solicitar contato</p>
-          <img src="/svg/arrow-bottom-right.svg" alt="">
-        </button>
-      </a>
+      <div class="border-b border-b-black overflow-hidden">
+        <a href="">
+          <button class="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
+            <p class="text-base text-black transition-all duration-300 group-hover:translate-x-2">Home</p>
+            <img src="/svg/arrow-bottom-right.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
+      <div class="border-b border-b-black overflow-hidden">
+        <a href="">
+          <button class="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
+            <p class="text-base text-black transition-all duration-300 group-hover:translate-x-2">Serviços</p>
+            <img src="/svg/arrow-bottom-right.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
+      <div class="border-b border-b-black overflow-hidden">
+        <a href="">
+          <button class="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
+            <p class="text-base text-black transition-all duration-300 group-hover:translate-x-2">Cases</p>
+            <img src="/svg/arrow-bottom-right.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
+      <div class="border-b border-b-black overflow-hidden">
+        <a href="">
+          <button class="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
+            <p class="text-base text-black transition-all duration-300 group-hover:translate-x-2">Sobre</p>
+            <img src="/svg/arrow-bottom-right.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
+      <div class="border-b border-b-black overflow-hidden">
+        <a href="">
+          <button class="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
+            <p class="text-base text-black transition-all duration-300 group-hover:translate-x-2">Solicitar contato</p>
+            <img src="/svg/arrow-bottom-right.svg" alt="" onload="SVGInject(this)">
+          </button>
+        </a>
+      </div>
     </div>
     <div>
 
@@ -74,7 +100,7 @@
   </div>
 
   <!-- HEADER PC -->
-  <header class="hidden md:block mx-auto md:max-w-screen-lg lg:max-w-screen-xl py-10 absolute top-0 left-0 right-0 z-10 w-full">
+  <header class="hidden md:block mx-auto md:max-w-screen-lg lg:max-w-screen-xl py-10 absolute top-0 left-0 right-0 z-20 w-full">
     <div class="flex items-center gap-32">
       <img src="/svg/logoHero.svg" class="w-24 flex-1" alt="" onload="SVGInject(this)">
       <p class="text-xs w-1/2 uppercase flex-shrink-0 flex-1">Se diferencie, aumente seus resultados</p>
@@ -84,40 +110,56 @@
 
   <!-- NAVBAR PC -->
   <nav class="hidden fixed bottom-10 left-0 right-0 mx-auto w-fit z-50 md:flex items-center justify-center gap-3 py-3 px-4 navOptionsDesktop rounded-full">
-    <a href="" class="px-5 py-3">
+    <a href="" class="px-5 py-3 group transition-all duration-300 hover:opacity-70">
       <p class="text-base">Home</p>
     </a>
-    <a href="" class="px-5 py-3">
+    <a href="" class="px-5 py-3 group transition-all duration-300 hover:opacity-70">
       <p class="text-base">Serviços</p>
     </a>
-    <a href="" class="px-5 py-3">
+    <a href="" class="px-5 py-3 group transition-all duration-300 hover:opacity-70">
       <p class="text-base">Cases</p>
     </a>
-    <a href="" class="px-5 py-3">
+    <a href="" class="px-5 py-3 group transition-all duration-300 hover:opacity-70">
       <p class="text-base">Sobre</p>
     </a>
     <a href="">
-      <button class="flex items-center justify-center gap-2 px-5 py-3 bg-white rounded-full">
-        <p class="text-[#08060C]">Solicitar contato</p>
-        <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+      <button class="flex items-center justify-center gap-2 px-5 py-3 bg-white rounded-full group transition-all duration-300 maskButtonAnim">
+        <div class="mask-button-text">
+          <p class="text-[#08060C] first-text">Solicitar contato</p>
+          <p class="text-[#08060C] second-text">Solicitar contato</p>
+        </div>
+        <img src="/svg/right-arrow-button.svg" alt="" class="transition-all duration-300 group-hover:translate-x-2" onload="SVGInject(this)">
       </button>
     </a>
   </nav>
 
   <!-- HERO -->
-  <main class="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px]">
+  <main class="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden" id="hero">
+    <a href="#cases" onclick="lenis.scrollTo('#cases')" class="heroButton">
+      <button class="w-full md:w-auto px-12 py-4 gradient-button md:flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 hidden maskButtonAnim">
+        <div class="mask-button-text">
+          <p class="text-[#08060C] first-text">See project</p>
+          <p class="text-[#08060C] second-text">See project</p>
+
+        </div>
+        <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+      </button>
+    </a>
     <div class="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
       <video class="w-full h-full object-cover" autoplay muted loop>
-        <source src="/img/3D_ASSET_PAGE_01.mp4" type="video/mp4">
+        <source src="/img/output35.mp4" id="heroVideo" type="video/mp4" loading="lazy">
         Seu navegador não suporta o elemento de vídeo.
       </video>
     </div>
     <div class="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-      <h1 class="text-5xl md:text-8xl">USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS</h1>
-      <a href="">
-        <button class="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10">
-          <p class="text-[#08060C]">See project</p>
-          <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+      <h1 class="text-5xl md:text-8xl revealHeroText">USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS</h1>
+      <a href="#cases" onclick="lenis.scrollTo('#cases')">
+        <button class="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim group transition-all duration-300">
+          <div class="mask-button-text">
+            <p class="text-[#08060C] first-text">See project</p>
+            <p class="text-[#08060C] second-text">See project</p>
+          </div>
+          <img src="/svg/right-arrow-button.svg" class="transition-all duration-300 group-hover:translate-x-2" alt="" onload="SVGInject(this)">
         </button>
       </a>
       <div class="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
@@ -129,27 +171,30 @@
   </main>
 
   <!-- SECTION 02 -->
-  <section class="px-6 py-14 md:py-32 relative md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-    <video class="" width="146" autoplay muted loop>
-      <source src="/img/3D_ASSET_PAGE_01.mp4" type="video/mp4">
+  <section class="px-6 py-14 md:py-32 relative md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto section02 ">
+    <video class="w-[146px] md:w-[306px] secondVideo" autoplay muted loop>
+      <source src="/img/output35.mp4" type="video/mp4">
       Seu navegador não suporta o elemento de vídeo.
     </video>
-    <h2 class="text-3xl uppercase first-line:block first-line:text-right md:hidden">
+    <h2 class="text-3xl uppercase first-line:block first-line:text-right md:hidden secondHeader relative z-10">
       <div class="text-right">
         “MELHORE SUA
       </div> VISIBILIDADE E PRESENÇA DIGITAL ATRÁVES DO NOSSO DESIGN. <span class="text-[rgba(148,148,148,0.5)]">CUIDAMOS DOS SEUS CRIATIVOS, KEY VISUAL, IDENTIDADE VISUAL E SITE DO SEU Negócio
         e/ou LANCAMENTO”<span>
     </h2>
-    <h2 class="text-5xl uppercase first-line:block first-line:text-right hidden md:block">
-      <div class="text-right">
+    <h2 class="text-[46px] uppercase first-line:block first-line:text-right secondHeader hidden md:block relative z-10">
+      <div class="text-right flex items-center justify-end relative z-10 w-full">
         “MELHORE SUA VISIBILIDADE E
-      </div>PRESENÇA DIGITAL ATRÁVES DO NOSSO DESIGN. <span class="text-[rgba(148,148,148,0.5)]">CUIDAMOS DOS SEUS CRIATIVOS, KEY VISUAL, IDENTIDADE VISUAL E SITE DO SEU Negócio
-        e/ou LANCAMENTO”<span>
+      </div>
+      <div class="w-full">PRESENÇA DIGITAL ATRÁVES DO NOSSO</div>
+      <div class="w-full"> DESIGN. CUIDAMOS DOS SEUS CRIATIVOS, KEY</div>
+      <div class="w-full">VISUAL, IDENTIDADE VISUAL E SITE DO SEU</div> Negócio
+      e/ou LANCAMENTO”
     </h2>
   </section>
 
   <!-- SECTION 03 SERVICES -->
-  <section class="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
+  <section class="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto section03">
     <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">02 / </span>Nossos serviços</h5>
     <div class="toggleContent pt-6 pb-8">
       <div class="toggleButton flex items-center justify-between">
@@ -165,6 +210,7 @@
         páginas rápidas, adaptadas e responsivas para a melhor
         experiencia do seu lead e venda do seu infoproduto e serviço
         no digital.</p>
+      <span class="contentAsideBar"></span>
     </div>
     <div class="toggleContent pt-6 pb-8">
       <div class="toggleButton flex items-center justify-between">
@@ -177,6 +223,7 @@
       <p class="text-base md:text-2xl extraContent">Desenvolvemos Kv`s conceituais e alinhadas a sua estratégia.
         Já trabalhamos e criamos peças responsáveis por gerar
         faturamentos acima de 6 dígitos aos nossos clientes.</p>
+      <span class="contentAsideBar"></span>
     </div>
     <div class="toggleContent pt-6 pb-8">
       <div class="toggleButton flex items-center justify-between">
@@ -191,6 +238,7 @@
         Criamos marcas, elementos gráficos, cores, formatos, tipografias
         que posicionam, diferenciam e potencializam a voz do seu
         negócio.</p>
+      <span class="contentAsideBar"></span>
     </div>
     <div class="toggleContent pt-6 pb-8">
       <div class="toggleButton flex items-center justify-between">
@@ -204,104 +252,207 @@
         do seu lançamento. O Design não basta ser bonito, ele precisa
         ser funcional. Gere percepção de valor ao seu produto ou
         serviço, comunique de forma assertiva.</p>
+      <span class="contentAsideBar"></span>
     </div>
   </section>
 
   <!-- SECTION 04 CASES -->
-  <section class="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
+  <section class="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto" id="cases">
     <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">03 / </span>cases</h5>
-    <div class="mainCase mt-8">
-      <div class="mainCaseThumb flex flex-col justify-end align-center">
-        <div class="motionInsider absolute inset-0">
-          <span class="motionInsiderOverlay"></span>
-          <img src="/img/motionInsiderAssets/HERO.webp" class="heroImg" alt="">
-          <img src="/img/motionInsiderAssets/RedVector.svg" class="redVector" alt="">
-          <img src="/img/motionInsiderAssets/linha2.svg" class="lineMotion" alt="">
-          <img src="/img/motionInsiderAssets/overlayLogoReduzida.png" class="overlayLogo" alt="">
-          <img src="/img/motionInsiderAssets/logoReduzida.png" class="backTextSmallLogo" alt="">
-          <img src="/img/motionInsiderAssets/logoReduzida.png" class="backSmallLogo" alt="">
-          <img src="/img/motionInsiderAssets/logoReduzida.png" class="backSmallLogo2" alt="">
-          <img src="/img/motionInsiderAssets/ELIPSE.svg" class="elipseOverlay" alt="">
-          <img src="/img/motionInsiderAssets/overlayCruzEsq.svg" class="overlayCruzEsq" alt="">
+    <div class="relative">
+      <span class="topBarCase1"></span>
+      <div class="mainCase motionInsiderCase mt-8">
+        <div class="mainCaseThumb flex flex-col justify-end align-center">
+          <div class="motionInsider absolute inset-0 caseThumb">
+            <span class="motionInsiderOverlay"></span>
+            <img src="/img/motionInsiderAssets/HERO.webp" class="heroImg" alt="">
+            <img src="/img/motionInsiderAssets/RedVector.svg" class="redVector" alt="">
+            <img src="/img/motionInsiderAssets/linha2.svg" class="lineMotion" alt="">
+            <img src="/img/motionInsiderAssets/overlayLogoReduzida.png" class="overlayLogo" alt="">
+            <img src="/img/motionInsiderAssets/logoReduzida.png" class="backTextSmallLogo" alt="">
+            <img src="/img/motionInsiderAssets/logoReduzida.png" class="backSmallLogo" alt="">
+            <img src="/img/motionInsiderAssets/logoReduzida.png" class="backSmallLogo2" alt="">
+            <img src="/img/motionInsiderAssets/ELIPSE.svg" class="elipseOverlay" alt="">
+            <img src="/img/motionInsiderAssets/overlayCruzEsq.svg" class="overlayCruzEsq" alt="">
+          </div>
+          <div class="mainCaseSpecs pt-8 relative z-10">
+            <img src="/img/motionInsiderAssets/logoMotionInsider.svg" alt="" onload="SVGInject(this)">
+            <p class="text-base text-[#F3F3F2] mt-4">Landing Page Lançamento</p>
+          </div>
         </div>
-        <div class="mainCaseSpecs pt-8 relative z-10">
-          <img src="/img/motionInsiderAssets/logoMotionInsider.svg" alt="" onload="SVGInject(this)">
-          <p class="text-base text-[#F3F3F2] mt-4">Landing Page Lançamento</p>
+        <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+          <div>
+            <p class="text-base font-semibold">Motion Insider | Levy Motion</p>
+            <p class="text-base opacity-80">Lançamentos</p>
+          </div>
+          <a href="/case-motion-insider">
+            <button class="flex items-center gap-2 maskButtonAnim">
+              <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+              <div class="mask-button-text">
+                <p class=" first-text">Veja completo</p>
+                <p class=" second-text">Veja completo</p>
+              </div>
+            </button>
+          </a>
         </div>
       </div>
-      <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
-        <div>
-          <p class="text-base font-semibold">Motion Insider | Levy Motion</p>
-          <p class="text-base opacity-80">Lançamentos</p>
+      <div class="mainCase palmBeachCase absolute inset-0 z-10">
+        <div class="mainCaseThumb flex flex-col justify-end align-center">
+          <div class="palmBeach absolute inset-0 caseThumb">
+            <img src="/img/palmBeach/FOTO FAMILIA.webp" class="palmBeachFoto" alt="">
+            <img src="/img/palmBeach/setas-palm-beach.svg" class="palmBeachArrows" alt="" onload="SVGInject(this)">
+            <span class="palmBeachSquare"></span>
+          </div>
+          <div class="mainCaseSpecs md:w-80 pt-8 relative z-10">
+            <p class="text-xl font-semibold">Palm Beach</p>
+            <p class="text-base text-[#F3F3F2] mt-1">Site institucional</p>
+          </div>
         </div>
-        <a href="">
-          <button class="flex items-center gap-2">
-            <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
-            <p class="text-base opacity-80">Veja completo</p>
-          </button>
-        </a>
+        <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+          <div>
+            <p class="text-base font-semibold">Palm Beach</p>
+            <p class="text-base opacity-80">Site institucional Imobiliário</p>
+          </div>
+          <a href="/case-palm-beach">
+            <button class="flex items-center gap-2 maskButtonAnim">
+              <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+              <div class="mask-button-text">
+                <p class=" first-text">Veja completo</p>
+                <p class=" second-text">Veja completo</p>
+              </div>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row md:gap-8 md:w-full">
-      <div class="mainCase md:flex-1 mt-9">
-        <div class="mainCaseThumb flex flex-col justify-end align-center">
-          <div class="absolute inset-0">
 
-            <img src="img/BPO Class Thumb.webp" class="w-full h-full object-cover" alt="">
+    <div class="flex flex-col md:flex-row md:gap-8 md:w-full  md:mt-8">
+      <div class="relative md:flex md:flex-1 mt-9">
+        <span class="topBarCase2"></span>
+        <div class="mainCase bpoClassCase md:flex-1 opacity-0">
+          <div class="mainCaseThumb flex flex-col justify-end align-center">
+            <div class="absolute inset-0 caseThumb">
+              <img src="img/BPO Class Thumb.webp" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="mainCaseSpecs pt-4 relative z-10">
+              <p class="text-base font-semibold">BPO CLASS SUMMIT</p>
+              <p class="text-base opacity-80">Website design</p>
+            </div>
           </div>
-          <div class="mainCaseSpecs pt-4 relative z-10">
-
-            <p class="text-base font-semibold">BPO CLASS SUMMIT</p>
-            <p class="text-base opacity-80">Website design</p>
+          <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
+            <div>
+              <p class="text-2xl font-medium text-[#F3F3F2]">BPO Class Submit</p>
+              <p class="text-base opacity-80 mt-1">Evento presencial de BPO Financeiro</p>
+            </div>
+            <a href="/case-bpo-class">
+              <button class="flex items-center gap-2 maskButtonAnim">
+                <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+                <div class="mask-button-text">
+                  <p class=" first-text">Veja completo</p>
+                  <p class=" second-text">Veja completo</p>
+                </div>
+              </button>
+            </a>
           </div>
         </div>
-        <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
-          <div>
-
-            <p class="text-2xl font-medium text-[#F3F3F2]">BPO Class Submit</p>
-            <p class="text-base opacity-80 mt-1">Evento presencial de BPO Financeiro</p>
+        <div class="mainCase candyLipsCase absolute inset-0 z-10 md:flex-1">
+          <div class="mainCaseThumb flex flex-col justify-end align-center">
+            <div class="absolute inset-0 caseThumb">
+              <span class="candyLipsOverlay"></span>
+              <img src="img/CandyLips/candyLips.webp" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="mainCaseSpecs pt-4 relative z-10">
+              <p class="text-base font-semibold">Candy Lips</p>
+              <p class="text-base opacity-80">Lançamento WebSite</p>
+            </div>
           </div>
-          <a href="">
-            <button class="flex items-center gap-2">
-              <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
-              <p class="text-base text-nowrap opacity-80">Veja completo</p>
-            </button>
-          </a>
+          <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
+            <div>
+              <p class="text-2xl font-medium text-[#F3F3F2]">Karyn Souza</p>
+              <p class="text-base opacity-80 mt-1">Landing Page e KV lançamento</p>
+            </div>
+            <a href="/case-candy-lips">
+              <button class="flex items-center gap-2 maskButtonAnim">
+                <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+                <div class="mask-button-text">
+                  <p class=" first-text">Veja completo</p>
+                  <p class=" second-text">Veja completo</p>
+                </div>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="mainCase md:flex-1 mt-9">
-        <div class="mainCaseThumb flex flex-col justify-end align-center">
-          <div class="absolute inset-0">
-            <span class="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent"></span>
-            <img src="img/AOrdemThumb.webp" class="w-full h-full object-cover" alt="">
+      <div class="relative md:flex md:flex-1 mt-9">
+        <span class="topBarCase3"></span>
+        <div class="mainCase ordemCase md:flex-1">
+          <div class="mainCaseThumb flex flex-col justify-end align-center">
+            <div class="absolute inset-0 caseThumb">
+              <span class="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent"></span>
+              <img src="img/AOrdemThumb.webp" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="mainCaseSpecs pt-4 relative z-10">
+              <p class="text-2xl font-medium text-[#F3F3F2]">A Ordem</p>
+              <p class="text-xs text-[#F3F3F2] mt-2">Mentoria / ID Visual</p>
+            </div>
           </div>
-          <div class="mainCaseSpecs pt-4 relative z-10">
-            <p class="text-2xl font-medium text-[#F3F3F2]">A Ordem</p>
-            <p class="text-xs text-[#F3F3F2] mt-2">Mentoria / ID Visual</p>
+          <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
+            <div>
+              <p class="text-2xl font-medium">Gabi Cervantes</p>
+              <p class="text-base opacity-80 mt-1">KV e Logo para Mentoria</p>
+            </div>
+            <a href="/case-a-ordem">
+              <button class="flex items-center gap-2 maskButtonAnim">
+                <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+                <div class="mask-button-text">
+                  <p class=" first-text">Veja completo</p>
+                  <p class=" second-text">Veja completo</p>
+                </div>
+              </button>
+            </a>
           </div>
         </div>
-        <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
-          <div>
-            <p class="text-2xl font-medium">Gabi Cervantes</p>
-            <p class="text-base opacity-80 mt-1">KV e Logo para Mentoria</p>
+        <div class="mainCase bernardoCase md:flex-1 absolute inset-0 z-10">
+          <div class="mainCaseThumb flex flex-col justify-end align-center">
+            <div class="absolute inset-0 caseThumb">
+              <span class="mviOverlay"></span>
+              <img src="img/bernandoCaetano/bernardoCaetano.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="mainCaseSpecs pt-4 relative z-10">
+              <p class="text-2xl font-medium text-[#F3F3F2]">MVI - Método Infalível de Pagínas</p>
+              <p class="text-xs text-[#F3F3F2] mt-2">Lançamento Web Site</p>
+            </div>
           </div>
-          <a href="">
-            <button class="flex items-center gap-2">
-              <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
-              <p class="text-base opacity-80">Veja completo</p>
-            </button>
-          </a>
+          <div class="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
+            <div>
+              <p class="text-2xl font-medium">Bernardo Caetano I Agência Tucano</p>
+              <p class="text-base opacity-80 mt-1">Ui Design Landing Page</p>
+            </div>
+            <a href="/case-bernardo">
+              <button class="flex items-center gap-2 maskButtonAnim">
+                <img src="/svg/fullProjectIcon.svg" alt="" onload="SVGInject(this)">
+                <div class="mask-button-text text-nowrap">
+                  <p class=" first-text">Veja completo</p>
+                  <p class=" second-text">Veja completo</p>
+                </div>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
 
     <div class="mt-12 md:flex md:items-center md:justify-between">
       <p class="text-xl w-3/4 md:flex-1">“66% dos cliques são norteados pelo design</p>
       <div class="flex items-center md:flex-1 justify-between mt-8 md:mt-0">
-        <a href="">
-          <button class="w-full px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full">
-            <p class="text-[#08060C] text-sm">Ver todos os projetos</p>
-            <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+        <a href="/cases">
+          <button class="w-full px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full group transition-all duration-300 maskButtonAnim">
+            <div class="mask-button-text">
+              <p class="text-[#08060C] first-text">Ver todos os projetos</p>
+              <p class="text-[#08060C] second-text">Ver todos os projetos</p>
+            </div>
+            <img src="/svg/right-arrow-button.svg" class="transition-all duration-300 group-hover:translate-x-2" alt="" onload="SVGInject(this)">
           </button>
         </a>
         <div class="border-solid border border-[#8E8E8E] h-9 w-9 md:h-14 rounded-full flex items-center justify-center">
@@ -312,7 +463,7 @@
   </section>
 
   <!-- SECTION TESTIMONIAL -->
-  <section class="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
+  <section class="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto section05">
     <h5 class="text-sm uppercase py-2"><span class="text-[#4F4F4F]">04 / </span>DEPOIMENTOS</h5>
     <!-- Slider main container -->
     <div class="swiper mySwiper">
@@ -321,11 +472,55 @@
         <!-- Slides -->
         <div class="swiper-slide">
           <div class="md:flex md:items-center md:justify-between md:gap-8">
-            <div class="flex flex-col md:w-[520px]">
-              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+            <div class="flex flex-col md:w-[520px] w-full h-[400px] md:h-[502px]">
+              <div class="blurred-img w-full h-full overflow-hidden" style="background-image: url(/img/feedbackPhoto01-small.jpg)">
+                <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
+              </div>
+
               <div class="flex items-center justify-between mt-4">
-                <p class="text-sm font-semibold">Nome do cliente</p>
+                <p class="text-sm font-semibold">Adriel Araujo</p>
+                <p class="text-sm opacity-80">Lançamento completo</p>
+              </div>
+            </div>
+            <div class="mt-8 md:flex-1 md:mt-0">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base md:text-2xl mt-8">Já trabalho com o Souza em vários projetos. Fizemos 3 projetos neste tempo juntos. Ele é um cara incrível, super cumpre prazos, o pra mim é essencial. Já entreguei diversos desafios nas mãos dele, e eu tenho uma certa exigência visual, e ele sempre consegue me surpreender e entregar além daquilo que foi combinado, que é excelente, né?
+                Eu sempre acredito e acredito muito, defendo muito que o visual vende e vende muito, então pra mim é sempre muito importante ter algo de extrema qualidade e é extremamente isso que o Souza entrega.
+
+                Eu super recomendo ele para todos que conheço. Um cara extremamente capaz.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="md:flex md:items-center md:justify-between md:gap-8">
+            <div class="flex flex-col md:w-[520px] w-full h-[400px] md:h-[502px]">
+              <div class="blurred-img w-full h-full overflow-hidden" style="background-image: url(/img/feedbackPhotoLevi-small.jpg)">
+                <img src="/img/feedbackPhotoLevi.jpg" class="rounded" alt="">
+              </div>
+
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Levi</p>
                 <p class="text-sm opacity-80">Key Visual</p>
+              </div>
+            </div>
+            <div class="mt-8 md:flex-1 md:mt-0">
+              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
+              <p class="text-base md:text-2xl mt-8">O Trabalho do Davidson, porr@. A gente aqui na na Motion Insider curtiu muito o resultado. A gente fez duas páginas com ele, atendimento, entrega, foi muito foda. Conseguimos ter os resultados que tanto queriamos. As páginas, a galera sempre chega elogiando, pô quem fez o site de voces, e tal? Então parabens ai por tudo.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="md:flex md:items-center md:justify-between md:gap-8">
+            <div class="flex flex-col md:w-[520px] w-full h-[400px] md:h-[502px]">
+              <div class="blurred-img w-full h-full overflow-hidden" style="background-image: url(/img/feedbackPhotoGabi-small.jpg)">
+                <img src="/img/feedbackPhotoGabi.jpg" class="rounded" alt="">
+              </div>
+
+              <div class="flex items-center justify-between mt-4">
+                <p class="text-sm font-semibold">Gabi Cervantes</p>
+                <p class="text-sm opacity-80">Equipe de Designer</p>
               </div>
             </div>
             <div class="mt-8 md:flex-1 md:mt-0">
@@ -335,83 +530,42 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="md:flex md:items-center md:justify-between md:gap-8">
-            <div class="flex flex-col md:w-[520px]">
-              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
-              <div class="flex items-center justify-between mt-4">
-                <p class="text-sm font-semibold">Nome do cliente</p>
-                <p class="text-sm opacity-80">Key Visual</p>
-              </div>
-            </div>
-            <div class="mt-8 md:flex-1 md:mt-0">
-              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
-              <p class="text-base md:text-2xl mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="md:flex md:items-center md:justify-between md:gap-8">
-            <div class="flex flex-col md:w-[520px]">
-              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
-              <div class="flex items-center justify-between mt-4">
-                <p class="text-sm font-semibold">Nome do cliente</p>
-                <p class="text-sm opacity-80">Key Visual</p>
-              </div>
-            </div>
-            <div class="mt-8 md:flex-1 md:mt-0">
-              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
-              <p class="text-base md:text-2xl mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="md:flex md:items-center md:justify-between md:gap-8">
-            <div class="flex flex-col md:w-[520px]">
-              <img src="/img/feedbackPhoto01.jpg" class="rounded" alt="">
-              <div class="flex items-center justify-between mt-4">
-                <p class="text-sm font-semibold">Nome do cliente</p>
-                <p class="text-sm opacity-80">Key Visual</p>
-              </div>
-            </div>
-            <div class="mt-8 md:flex-1 md:mt-0">
-              <img src="/svg/quote-testimonial.svg" alt="" onload="SVGInject(this)">
-              <p class="text-base md:text-2xl mt-8">O Souza fez parte da minha equipe como designer por quase 2 anos. Ele, que criava todo material visual das minhas redes sociais, Youtube, ADS. Só tenho elogios para o trabalho dele. Ele é muito talentoso, é um dos melhores designers com quem eu já trabalhei e também é muito pontual, porque toda vez que eu precisei de alguma demanda, ele nunca atrasou, sempre entregou.</p>
-            </div>
-          </div>
-        </div>
+
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
   <!-- SECTION ABOUT -->
-  <section class="px-6 py-14 relative md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-    <p class="text-7xl md:text-[213px] uppercase">Davidson Souza</p>
-    <p class="text-sm md:text-lg text-[#5F5F5F] mt-4 w-1/2">
-      Escrevi e transformei diversas histórias através do meu trabalho.
-      <br><br>
-      Já trabalhei com diversas agências no mercado de infoproduto, mais de 30 projetos que geraram resultados de excelência. Meu objetivo é construir parcerias e potencializar os resultados do seu negócio,
-      <br><br>
-      Seja diferente, pontencialize sua voz e gere resultados!
-    </p>
-    <div class="flex items-center mt-10 gap-11">
-      <div class="flex items-center gap-4">
-        <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded "><img src="/svg/projects-delivery-icon.svg" class="w-5 h-5 md:w-11 md:h-11" alt="" onload="SVGInject(this)"></div>
-        <div class="">
-          <p class="text-base md:text-4xl font-bold">+30</p>
-          <p class="text-xs md:text-base">Projetos entregues</p>
+  <section class="section06 relative overflow-hidden">
+    <div class="px-6 py-14 relative md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
+      <p class="text-7xl md:text-[213px] uppercase aboutName">Davidson <span class="font-medium">Souza<span></p>
+      <p class="text-sm md:text-lg text-[#5F5F5F] mt-4 w-1/2">
+        Escrevi e transformei diversas histórias através do meu trabalho.
+        <br><br>
+        Já trabalhei com diversas agências no mercado de infoproduto, mais de 30 projetos que geraram resultados de excelência. Meu objetivo é construir parcerias e potencializar os resultados do seu negócio,
+        <br><br>
+        Seja diferente, pontencialize sua voz e gere resultados!
+      </p>
+      <div class="flex items-center mt-10 gap-11">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded "><img src="/svg/projects-delivery-icon.svg" class="w-5 h-5 md:w-11 md:h-11" alt="" onload="SVGInject(this)"></div>
+          <div class="">
+            <p class="text-base md:text-4xl font-bold">+30</p>
+            <p class="text-xs md:text-base">Projetos entregues</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded"><img src="/svg/experience-years.svg" class="w-5 h-5 md:w-11 md:h-11" alt="" onload="SVGInject(this)"></div>
+          <div class="">
+            <p class="text-base md:text-4xl font-bold">4 anos</p>
+            <p class="text-xs md:text-base">de experiência</p>
+          </div>
         </div>
       </div>
-      <div class="flex items-center gap-4">
-        <div class="flex items-center justify-center p-2 border border-solid border-[#808080] rounded"><img src="/svg/experience-years.svg" class="w-5 h-5 md:w-11 md:h-11" alt="" onload="SVGInject(this)"></div>
-        <div class="">
-          <p class="text-base md:text-4xl font-bold">4 anos</p>
-          <p class="text-xs md:text-base">de experiência</p>
-        </div>
-      </div>
+      <img src="/img/imagemSouza.jpg" class="imagemBio" alt="">
+
     </div>
-    <img src="/img/imagemSouza.jpg" class="imagemBio" alt="">
     <img src="/svg/letsTalk.svg" class="letsTalkOverlay" alt="">
   </section>
 
@@ -427,12 +581,17 @@
       </div>
       <div class="hidden md:flex items-center gap-4">
         <img src="/img/messagePhoto.png" alt="">
-        <p class="text-xl underline w-1/2">
-          Se preferir, me mande uma mensagem!
-        </p>
+        <!-- TO DO: LINK DO WHATSAPP -->
+        <a href="">
+          <p class="text-xl underline w-2/3">
+            Se preferir, me mande uma mensagem!
+          </p>
+        </a>
+
       </div>
     </div>
     <div class="flex-1">
+      <!-- TO DO: INTEGRAÇÃO DO FORM -->
       <form action="" method="post" class="flex flex-col gap-6 mt-9">
         <input type="text" placeholder="Nome completo" aria-placeholder="Nome completo" id="name">
         <input type="email" placeholder="Email" aria-placeholder="Email" id="email">
@@ -469,26 +628,32 @@
             <label for="billingOption04" class="button">Acima de x mil</label>
           </div>
         </fieldset>
-        <button type="submit" class="w-full px-6 py-2 gradient-button flex items-center justify-center rounded-full">
-          <p class="text-[#08060C]">Solicitar contato</p>
+        <button class="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim" type="submit">
+          <div class="mask-button-text">
+            <p class="text-[#08060C] first-text">Solicitar contato</p>
+            <p class="text-[#08060C] second-text">Solicitar contato</p>
+          </div>
+          <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
         </button>
-
-
       </form>
     </div>
 
   </section>
 
-  <footer class="px-6 py-14 bg-[#08060C] ">
+  <footer class="px-6 py-14 pb-36 bg-[#08060C] ">
     <div class="md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto md:flex md:flex-wrap md:justify-between">
       <div class="flex items center gap-4 md:flex-1">
         <img src="/img/lastCtaPic.png" class="rounded-lg h-32 md:h-full" alt="">
         <div>
           <h4 class="text-4xl md:text-7xl uppercase md:w-1/2">Vamos conversar?</h4>
+          <!-- TO DO: LINK DO WHATSAPP -->
           <a href="">
-            <button class="px-4 py-2 gradient-button flex items-center justify-center gap-3 rounded-full mt-3">
-              <p class="text-[#08060C]">Entrar em contato</p>
-              <img src="/svg/right-arrow-button.svg" alt="" onload="SVGInject(this)">
+            <button class="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-2 md:mt-2 group transition-all duration-300 maskButtonAnim">
+              <div class="mask-button-text">
+                <p class="text-[#08060C] first-text">Entrar em contato</p>
+                <p class="text-[#08060C] second-text">Entrar em contato</p>
+              </div>
+              <img src="/svg/right-arrow-button.svg" class="transition-all duration-300 group-hover:translate-x-2" alt="" onload="SVGInject(this)">
             </button>
           </a>
         </div>
@@ -503,13 +668,19 @@
           <p class="text-sm mt-2 text-[#828282]">(31) 97505-3019</p>
         </div>
         <div class="w-full flex justify-center items-center order-1 md:order-2 md:w-auto">
-          <button class="flex items-center gap-2 pb-1 border-solid border-b border-b-[#0E0D1A]">
-            <p class="text-lg">Voltar ao topo</p>
-            <img src="/svg/backToTop.svg" alt="" onload="SVGInject(this)">
-          </button>
+          <a href="#hero" onclick="lenis.scrollTo('#hero')">
+            <button class="flex items-center gap-2 pb-1 border-solid border-b border-b-[#0E0D1A] group transition-all duration-300 maskButtonAnim">
+              <div class="mask-button-text">
+                <p class="first-text">Voltar ao topo</p>
+                <p class="second-text">Voltar ao topo</p>
+              </div>
+              <img src="/svg/backToTop.svg" class="transition-all duration-300 group-hover:-translate-y-2" alt="" onload="SVGInject(this)">
+            </button>
+          </a>
         </div>
       </div>
-      <div class="flex md:w-full items-center justify-between mt-7 md:mt-24 pt-7 md:pt-16 border-t border-t-white">
+      <div class="flex md:w-full items-center justify-between mt-7 md:mt-24 pt-4 md:pt-8 border-t border-t-white">
+        <!-- TO DO: LINKS DO FOOTER -->
         <p class="text-sm text-[#828282]">Solucoes</p>
         <p class="text-sm text-[#828282]">Solucoes</p>
         <p class="text-sm text-[#828282]">Solucoes</p>
@@ -521,9 +692,25 @@
   </footer>
 
   <script src="/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
 
   <!-- SLIDER SCRIPT INITIALIZATION -->
   <script>
+
+    const lenis = new Lenis({
+      duration: 1.5,
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
     let swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
