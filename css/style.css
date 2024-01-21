@@ -770,4 +770,8 @@ input[type=radio]:checked + label.button {
 
 .blurred-img.loaded img {
   opacity: 1;
+}
+
+#services, #cases, #about {
+  scroll-margin-top: 150px;
 }/*# sourceMappingURL=style.css.map */
